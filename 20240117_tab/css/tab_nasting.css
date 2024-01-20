@@ -1,0 +1,61 @@
+:root {
+    --gray: #ccc;
+    --white: #fff;
+    --orange: #ff7548;
+}
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+html {
+    font-size: 62.5%; /* 10px */
+}
+body {
+    padding: 10rem;
+    font-size: 1rem;
+}
+.tab-type1 {
+    display: flex;
+    height: 8.5rem; 
+    gap: 0.8rem;
+    border-bottom: 0.1rem solid var(--orange);
+    & li {
+        flex: 1;
+        border: .1rem solid var(--gray);
+        border-bottom: none;
+        height: 8.4rem; 
+    }
+    & button {
+        width: 100%;
+        height: 8.4rem; 
+        font-size: 2.1rem;
+        color: var(--gray);
+    }
+    .--active { /* 요소 선택자만 & 쓰고 클래스는 그냥 써도 됨*/
+        border-color: var(--orange);
+        border-bottom: 0.1rem solid var(--white);
+        & button {
+            color: var(--orange);
+        }
+    }
+}
+
+.tab-content {
+    margin-top: 1rem;
+    > div { /* 자식이라 & 안 써도 됨*/
+        display: none;
+        background-color: rgba(0,0,0,.1);
+        text-align: center;
+        line-height: 10rem;
+        font-size: 2rem;
+        &.--active { /* 선택자에 바로 붙여서 쓸 때 &. 사용 */
+            display: block;
+        }
+    }
+}

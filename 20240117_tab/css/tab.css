@@ -1,0 +1,64 @@
+:root {
+    --gray: #ccc;
+    --white: #fff;
+    --orange: #ff7548;
+}
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+html {
+    font-size: 62.5%; /* 10px */
+}
+body {
+    padding: 10rem;
+    font-size: 1rem;
+}
+.tab-type1 {
+    display: flex;
+    height: 8.5rem; /* 자식이 선을 뚫고 나가게 하기 위해 */
+    gap: 0.8rem;
+    border-bottom: 0.1rem solid var(--orange);
+}
+/* 부모의 크기가 작으면 자식은 뚫고 나갈 수 있음<-이러기위해선 자식의 크기가 존재해야 함 */
+.tab-type1 li {
+    flex: 1;
+    border: .1rem solid var(--gray);
+    border-bottom: none;
+    height: 8.4rem; /* 부모의 보더를 뚫고 가기 위해 높이값 줌 */
+}
+.tab-type1 .--active {
+    border-color: var(--orange);
+    border-bottom: 0.1rem solid var(--white);
+}
+
+.tab-type1 button {
+    width: 100%;
+    height: 8.4rem; /* 클릭영역 보완을 위해서 높이 줘야 함 */
+    font-size: 2.1rem;
+    color: var(--gray);
+}
+.tab-type1 .--active button {
+    color: var(--orange);
+}
+
+/* tab-content */
+.tab-content {
+    margin-top: 1rem;
+}
+.tab-content > div {
+    display: none;
+    background-color: rgba(0,0,0,.1);
+    text-align: center;
+    line-height: 10rem;
+    font-size: 2rem;
+}
+.tab-content > div.--active {
+    display: block;
+}

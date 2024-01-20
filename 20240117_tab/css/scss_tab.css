@@ -1,0 +1,63 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 10rem;
+  font-size: 1rem;
+}
+
+.tab-type1 {
+  display: flex;
+  height: 8.5rem;
+  gap: 0.8rem;
+  border-bottom: 0.1rem solid #ff7548;
+}
+.tab-type1 li {
+  flex: 1;
+  border: 0.1rem solid #ccc;
+  border-bottom: none;
+  height: 8.4rem;
+}
+.tab-type1 button {
+  width: 100%;
+  height: 8.4rem;
+  font-size: 2.1rem;
+  color: #ccc;
+  font-weight: normal;
+}
+.tab-type1 .--active {
+  border-color: #ff7548;
+  border-bottom: 0.1rem solid #fff;
+}
+.tab-type1 .--active button {
+  font-size: 2.1rem;
+  color: #ff7548;
+  font-weight: bold;
+}
+
+.tab-content {
+  margin-top: 1rem;
+}
+.tab-content > div {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 10rem;
+  font-size: 2rem;
+}
+.tab-content > div.--active {
+  display: block;
+}/*# sourceMappingURL=scss_tab.css.map */
